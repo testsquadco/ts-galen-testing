@@ -1,8 +1,8 @@
 {
   "tests" : [ {
     "name" : "Verify homepage layout across different screen sizes",
-    "startedAt" : 1739357133374,
-    "endedAt" : 1739357133374,
+    "startedAt" : 1739359761574,
+    "endedAt" : 1739359761574,
     "failed" : false,
     "statistic" : {
       "passed" : 1,
@@ -15,8 +15,8 @@
     "failed" : false
   }, {
     "name" : "Verify navigation menu functionality",
-    "startedAt" : 1739357211675,
-    "endedAt" : 1739357211675,
+    "startedAt" : 1739359797656,
+    "endedAt" : 1739359797656,
     "failed" : false,
     "statistic" : {
       "passed" : 1,

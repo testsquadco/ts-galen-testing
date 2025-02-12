@@ -25,6 +25,8 @@ This is a powerful visual layout testing framework that combines the robustness 
 - 🤖 **Intelligent Retries**: Built-in retry mechanism for flaky tests
 - 📸 **Automatic Screenshots**: Visual evidence on test failures
 - 📊 **Rich HTML Reports**: Comprehensive test reports with visual comparisons
+- ☁️ **Cloud Testing**: Support for Selenium Grid, LambdaTest, BrowserStack, and SauceLabs
+- 🔄 **Parallel Execution**: Run tests concurrently across different browsers and platforms
 
 ## Getting Started
 
@@ -32,8 +34,10 @@ This is a powerful visual layout testing framework that combines the robustness 
 
 - Java 11 or higher
 - Maven 3.6.x or higher
-- Chrome/Firefox browser installed
+- Chrome/Firefox/Edge browser installed
 - Appropriate WebDriver for your browser version
+- Selenium Grid (optional, for grid testing)
+- Cloud platform account (optional, for cloud testing)
 
 ### Installation
 
@@ -42,42 +46,94 @@ This is a powerful visual layout testing framework that combines the robustness 
    git clone https://github.com/yourusername/testsquad.git
    ```
 2. Install dependencies:
-  ```bash
-   mvn clean install
+   ```bash
+   mvn clean install -DskipTests
    ```
 
-### Basic Usage
+### Execution Environments
 
-1. Create a test class extending BaseTest:
-   ```java
-   public class MyLayoutTest extends BaseTest {
-   @Test
-   public void testHomepage() {
-   driver.get("https://your-website.com");
-   checkLayout("specs/homepage.spec", Arrays.asList("desktop", "mobile"));
-   }
-   }
-``
-2. Run the tests:
+The framework supports multiple execution environments:
+
+1. **Local Execution**:
    ```bash
-   mvn test
-``
-3. View the reports:
+   mvn test -Dexecution.environment=local
+   ```
+
+2. **Selenium Grid**:
    ```bash
-   open target/galen-reports/index.html
-``
+   mvn test \
+       -Dexecution.environment=grid \
+       -Dgrid.url=http://localhost:4444/wd/hub
+   ```
+
+3. **LambdaTest**:
+   ```bash
+   mvn test \
+       -Dexecution.environment=lambdatest \
+       -Dlambdatest.username=your_username \
+       -Dlambdatest.accesskey=your_access_key
+   ```
+
+4. **BrowserStack**:
+   ```bash
+   mvn test \
+       -Dexecution.environment=browserstack \
+       -Dbrowserstack.username=your_username \
+       -Dbrowserstack.accesskey=your_access_key
+   ```
+
+5. **SauceLabs**:
+   ```bash
+   mvn test \
+       -Dexecution.environment=saucelabs \
+       -Dsaucelabs.username=your_username \
+       -Dsaucelabs.accesskey=your_access_key
+   ```
+
+### Additional Test Configuration
+
+```bash
+# Specify browser and platform
+mvn test \
+    -Dbrowser=firefox \
+    -Dplatform="Windows 10" \
+    -Dbrowser.version=latest
+
+# Run tests in parallel
+mvn test -Dparallel.threads=4
+
+# Run tests in headless mode
+mvn test -Dheadless=true
+```
+
 ## Configuration
 
 ### Environment Configuration
 
 Create `config.properties` in `src/test/resources`:
 ```properties
-webdriver.type=chrome
+# Execution Configuration
+execution.environment=local  # Options: local, grid, lambdatest, browserstack, saucelabs
+browser=chrome
+headless=false
 base.url=https://your-website.com
+
+# Cloud Platform Configuration
+grid.url=http://localhost:4444/wd/hub
+lambdatest.username=${LAMBDATEST_USERNAME}
+lambdatest.accesskey=${LAMBDATEST_ACCESS_KEY}
+browserstack.username=${BROWSERSTACK_USERNAME}
+browserstack.accesskey=${BROWSERSTACK_ACCESS_KEY}
+saucelabs.username=${SAUCELABS_USERNAME}
+saucelabs.accesskey=${SAUCELABS_ACCESS_KEY}
+
+# Test Configuration
 screenshot.dir=target/screenshots
 max.retries=3
 retry.interval.seconds=2
+parallel.threads=2
 ```
+
 ### Screen Sizes
 
 Default screen sizes are configured in `BaseTest.java`:
@@ -149,4 +205,4 @@ TestSquad is released under the [MIT License](LICENSE).
 
 ---
 
-<p align="center">Powered by <a href="https://testsquad.co">TestSquad</a> - Your Quality Assurance Partner</p> 
+<p align="center">Powered by <a href="https://testsquad.co">TestSquad</a> - Your Quality Assurance Partner</p>

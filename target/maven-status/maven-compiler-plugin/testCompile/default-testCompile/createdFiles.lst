@@ -8,6 +8,7 @@ com/testsquad/annotations/ScreenSizes.class
 com/testsquad/utils/ScreenshotUtil.class
 com/testsquad/pages/BasePage.class
 com/testsquad/pages/HomePage.class
+com/testsquad/driver/WebDriverManager.class
 com/testsquad/base/BaseTest.class
 com/testsquad/data/models/TestUser$UserRole.class
 com/testsquad/reporting/GalenReportListener.class

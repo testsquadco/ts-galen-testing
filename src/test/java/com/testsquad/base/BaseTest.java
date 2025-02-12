@@ -15,6 +15,7 @@ import com.testsquad.utils.EnvironmentConfig;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.WebDriverException;
 import org.junit.jupiter.api.Test;
+import com.testsquad.driver.WebDriverManager;
 
 import java.util.Arrays;
 import java.util.List;
@@ -30,18 +31,12 @@ public class BaseTest {
 
     @BeforeEach
     public void setUp() {
-        driver = TestConfig.getDriver();
+        driver = WebDriverManager.getDriver();
     }
 
     @AfterEach
     public void tearDown() {
-        if (driver != null) {
-            try {
-                driver.quit();
-            } catch (Exception e) {
-                // Ignore exceptions during cleanup
-            }
-        }
+        WebDriverManager.quitDriver();
     }
 
     @BeforeAll

@@ -5,6 +5,7 @@
 /Users/eliya/ts-galen-testing/src/test/java/com/testsquad/data/TestDataProvider.java
 /Users/eliya/ts-galen-testing/src/test/java/com/testsquad/data/models/TestUser.java
 /Users/eliya/ts-galen-testing/src/test/java/com/testsquad/driver/WebDriverFactory.java
+/Users/eliya/ts-galen-testing/src/test/java/com/testsquad/driver/WebDriverManager.java
 /Users/eliya/ts-galen-testing/src/test/java/com/testsquad/exceptions/TestExecutionException.java
 /Users/eliya/ts-galen-testing/src/test/java/com/testsquad/extensions/RetryExtension.java
 /Users/eliya/ts-galen-testing/src/test/java/com/testsquad/pages/BasePage.java
