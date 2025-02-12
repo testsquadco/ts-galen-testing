@@ -1,0 +1,5 @@
+baseUrl: http://qa.example.com
+apiBaseUrl: http://api.qa.example.com
+credentials:
+  username: qauser
+  password: qapass 

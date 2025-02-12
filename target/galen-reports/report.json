@@ -1,0 +1,31 @@
+{
+  "tests" : [ {
+    "name" : "Verify homepage layout across different screen sizes",
+    "startedAt" : 1739357133374,
+    "endedAt" : 1739357133374,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 1,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "1-verify-homepage-layout-across-different-screen-sizes",
+    "duration" : 0,
+    "failed" : false
+  }, {
+    "name" : "Verify navigation menu functionality",
+    "startedAt" : 1739357211675,
+    "endedAt" : 1739357211675,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 1,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "2-verify-navigation-menu-functionality",
+    "duration" : 0,
+    "failed" : false
+  } ]
+}

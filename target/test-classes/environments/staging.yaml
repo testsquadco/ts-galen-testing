@@ -1,0 +1,5 @@
+baseUrl: http://staging.example.com
+apiBaseUrl: http://api.staging.example.com
+credentials:
+  username: staginguser
+  password: stagingpass 

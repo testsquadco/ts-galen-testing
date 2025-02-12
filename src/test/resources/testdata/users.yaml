@@ -1,0 +1,17 @@
+admin:
+  username: admin_user
+  password: admin123
+  email: admin@example.com
+  role: ADMIN
+
+regular_user:
+  username: test_user
+  password: test123
+  email: user@example.com
+  role: USER
+
+guest:
+  username: guest_user
+  password: guest123
+  email: guest@example.com
+  role: GUEST 

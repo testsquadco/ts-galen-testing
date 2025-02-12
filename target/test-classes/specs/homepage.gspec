@@ -1,0 +1,22 @@
+@objects
+    header              css     #header
+    main-content        css     #test_box-container
+    footer              css     #footer
+    
+= Header =
+    @on *
+        header:
+            visible
+            height > 0px
+
+= Main Content =
+    @on *
+        main-content:
+            visible
+            below header 0 to 100px
+
+= Footer =
+    @on *
+        footer:
+            visible
+            below main-content 0 to 100px 
