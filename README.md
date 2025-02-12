@@ -1,7 +1,7 @@
 # TestSquad - Visual Layout Testing Framework (Boiler-plate)
 
 <p align="center">
-  <img src="https://testsquad.co/wp-content/uploads/2022/04 testsquad-opt2-01-scaled-300x71.jpg" alt="TestSquad Logo" width="400"/>
+  <img src="https://testsquad.co/wp-content/uploads/2022/04/testsquad-opt2-01-scaled-300x71.jpg" width="400"/>
 </p>
 
 
