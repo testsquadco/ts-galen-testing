@@ -187,7 +187,7 @@ The framework generates detailed HTML reports after test execution:
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details. Mention TestSquad on LinkedIn :)
 
 ## Support
 
